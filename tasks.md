@@ -16,7 +16,7 @@ Setup the structure. If you think there are useful project level Skills, use the
 
 ### Config
 
-Use ark for inspiration. I want a well-documented config / tips file: ~/.tips.md or ./.tips.md read in sensible order. Tips contains yaml frontmatter for config of the tips CLI (user or project). It contains the tips content. 
+Use ark for inspiration. I want a well-documented config / tips file: ~/.tips.md or ./.tips.md read in sensible order. Tips contains yaml frontmatter for config of the tips CLI (user or project). It contains the tips content.
 
 Scaffold the loading, readme, and `tips config` command. Create a follow on task which is 'tips config directory' suggesting we use a posix style ~/.tips.d or similar if we want to split into many tip files.
 
@@ -36,7 +36,7 @@ A tip output will look something like this:
 <project name if present> **tips**
 github.com/dwmkerr/tips
 
-*Zoom In/Out in Tmux*
+_Zoom In/Out in Tmux_
 
 `<Leader>Z` to toggle zoom in / out
 
