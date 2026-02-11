@@ -1,9 +1,14 @@
+---
+# Tips configuration (optional)
+project: tips-example
+---
+
 ## Global
 
 - [x] ⌘ + Enter: Toggle iTerm fullscreen
 - [x] ⌥ + Space: Show/Hide iTerm
 - [ ] ^ + Space: Switch input (e.g. UK -> Chinese)
-- [x] ⌘ + Y: OpenAI 
+- [x] ⌘ + Y: OpenAI
 
 ## Chrome
 
