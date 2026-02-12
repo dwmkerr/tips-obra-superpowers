@@ -30,11 +30,13 @@ describe('findConfigFiles', () => {
   });
 
   it('handles cwd equals stopAt', () => {
-    fs.writeFileSync(path.join(testDir, '.tipsrc.yaml'), 'mergeTips: true');
+    const configPath = path.join(testDir, '.tipsrc.yaml');
+    fs.writeFileSync(configPath, 'mergeTips: true');
 
     const files = findConfigFiles(testDir, testDir);
 
     expect(files).toHaveLength(1);
+    expect(files[0]).toBe(configPath);
   });
 
   it('returns empty array when no config files exist', () => {
