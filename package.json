@@ -20,7 +20,7 @@
     "clean": "rm -rf dist coverage",
     "lint": "eslint --fix . && prettier --write .",
     "lint:check": "eslint . && prettier --check .",
-    "test": "jest --coverage"
+    "test": "NODE_OPTIONS='--experimental-vm-modules' jest --coverage"
   },
   "keywords": [
     "cli",
