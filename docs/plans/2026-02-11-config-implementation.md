@@ -13,6 +13,7 @@
 ## Task 1: Config Types
 
 **Files:**
+
 - Create: `src/lib/config/types.ts`
 - Test: `src/lib/config/types.spec.ts`
 
@@ -86,6 +87,7 @@ git commit -m "feat(config): add config type definitions"
 ## Task 2: Config File Discovery
 
 **Files:**
+
 - Create: `src/lib/config/discovery.ts`
 - Test: `src/lib/config/discovery.spec.ts`
 
@@ -193,6 +195,7 @@ git commit -m "feat(config): add config file discovery with directory walking"
 ## Task 3: Config Loader
 
 **Files:**
+
 - Create: `src/lib/config/loader.ts`
 - Test: `src/lib/config/loader.spec.ts`
 
@@ -241,7 +244,9 @@ describe('loadConfig', () => {
     const config = loadConfig(subDir, testDir);
 
     expect(config.mergeTips).toBe(true);
-    expect(config.$meta.mergeTips.origin).toBe(path.join(subDir, '.tipsrc.yaml'));
+    expect(config.$meta.mergeTips.origin).toBe(
+      path.join(subDir, '.tipsrc.yaml')
+    );
   });
 });
 ```
@@ -312,6 +317,7 @@ git commit -m "feat(config): add config loader with merging and origin tracking"
 ## Task 4: Config Index Export
 
 **Files:**
+
 - Create: `src/lib/config/index.ts`
 
 **Step 1: Create barrel export**
@@ -334,6 +340,7 @@ git commit -m "feat(config): add barrel export for config module"
 ## Task 5: Config Command Output
 
 **Files:**
+
 - Modify: `src/commands/config/index.ts`
 - Test: `src/commands/config/index.spec.ts`
 
@@ -436,6 +443,7 @@ echo "mergeTips: false" > .tipsrc.yaml
 Run: `npm run build && node dist/index.js config`
 
 Expected output:
+
 ```yaml
 # tips config
 # Loaded: ~/.tipsrc.yaml, ./.tipsrc.yaml
@@ -465,11 +473,12 @@ If fixes were needed, commit them.
 ## Task 7: Update README
 
 **Files:**
+
 - Modify: `README.md`
 
 **Step 1: Add config documentation**
 
-```markdown
+````markdown
 # tips
 
 CLI tool for saving and recalling useful tricks and shortcuts.
@@ -482,6 +491,7 @@ Install and run:
 npm install -g tips
 tips
 ```
+````
 
 ## Configuration
 
@@ -494,7 +504,7 @@ Tips uses `.tipsrc.yaml` for configuration. Files are loaded in order (later win
 ### Example `.tipsrc.yaml`
 
 ```yaml
-mergeTips: true  # Combine user + project tips (default: true)
+mergeTips: true # Combine user + project tips (default: true)
 ```
 
 ### View resolved config
@@ -504,14 +514,15 @@ tips config
 ```
 
 Outputs valid YAML showing current config and where each value originated.
-```
+
+````
 
 **Step 2: Commit**
 
 ```bash
 git add README.md
 git commit -m "docs: add configuration documentation to README"
-```
+````
 
 ---
 

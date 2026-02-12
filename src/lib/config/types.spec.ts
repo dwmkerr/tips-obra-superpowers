@@ -1,5 +1,5 @@
 import {describe, it, expect} from '@jest/globals';
-import type {Config, ConfigMeta} from './types.js';
+import type {Config} from './types.js';
 
 describe('Config types', () => {
   it('allows creating a valid config object', () => {
