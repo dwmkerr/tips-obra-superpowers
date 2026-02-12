@@ -22,7 +22,7 @@ Tips uses `.tipsrc.yaml` for configuration. Files are loaded in order (later win
 ### Example `.tipsrc.yaml`
 
 ```yaml
-mergeTips: true  # Combine user + project tips (default: true)
+mergeTips: true # Combine user + project tips (default: true)
 ```
 
 ### View resolved config

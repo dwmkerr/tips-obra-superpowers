@@ -14,7 +14,7 @@ export function loadConfig(
     $files: [],
   };
 
-  let merged: RawConfig = {...DEFAULT_CONFIG};
+  const merged: RawConfig = {...DEFAULT_CONFIG};
 
   for (const file of files) {
     try {
