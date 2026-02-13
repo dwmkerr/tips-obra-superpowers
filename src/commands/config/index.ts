@@ -10,11 +10,17 @@ export function createConfigCommand(): Command {
     const isTTY = process.stdout.isTTY;
 
     const lines: string[] = [];
-    lines.push('# tips config');
-    lines.push(`# Loaded: ${config.$meta.$files.join(', ') || '(defaults)'}`);
+    lines.push('# Config loaded from');
+    if (config.$meta.$files.length === 0) {
+      lines.push('# - defaults');
+    } else {
+      for (const file of config.$meta.$files) {
+        lines.push(`# - ${file}`);
+      }
+    }
     lines.push('');
 
-    lines.push(`# origin: ${config.$meta.mergeTips.origin}`);
+    lines.push(`# Source: ${config.$meta.mergeTips.source}`);
     lines.push(`mergeTips: ${config.mergeTips}`);
 
     const output = lines.join('\n');

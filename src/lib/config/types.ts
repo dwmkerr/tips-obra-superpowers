@@ -1,6 +1,6 @@
 export interface ConfigMeta {
   value: boolean;
-  origin: string;
+  source: string;
 }
 
 export interface ConfigMetaBlock {

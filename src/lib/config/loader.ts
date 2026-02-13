@@ -10,7 +10,7 @@ export function loadConfig(
 ): Config {
   const files = findConfigFiles(cwd, stopAt);
   const $meta: ConfigMetaBlock = {
-    mergeTips: {value: DEFAULT_CONFIG.mergeTips!, origin: 'default'},
+    mergeTips: {value: DEFAULT_CONFIG.mergeTips!, source: 'default'},
     $files: [],
   };
 
@@ -23,7 +23,7 @@ export function loadConfig(
 
       if (parsed.mergeTips !== undefined) {
         merged.mergeTips = parsed.mergeTips;
-        $meta.mergeTips = {value: parsed.mergeTips, origin: file};
+        $meta.mergeTips = {value: parsed.mergeTips, source: file};
       }
 
       $meta.$files.push(file);

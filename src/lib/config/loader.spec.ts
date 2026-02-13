@@ -29,7 +29,7 @@ describe('loadConfig', () => {
     const config = loadConfig(subDir, testDir);
 
     expect(config.mergeTips).toBe(false);
-    expect(config.$meta.mergeTips.origin).toBe(configPath);
+    expect(config.$meta.mergeTips.source).toBe(configPath);
     expect(config.$meta.$files).toContain(configPath);
   });
 
@@ -42,6 +42,6 @@ describe('loadConfig', () => {
     const config = loadConfig(subDir, testDir);
 
     expect(config.mergeTips).toBe(true);
-    expect(config.$meta.mergeTips.origin).toBe(childConfig);
+    expect(config.$meta.mergeTips.source).toBe(childConfig);
   });
 });

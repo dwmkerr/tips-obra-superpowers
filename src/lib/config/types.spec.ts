@@ -6,11 +6,11 @@ describe('Config types', () => {
     const config: Config = {
       mergeTips: true,
       $meta: {
-        mergeTips: {value: true, origin: '~/.tipsrc.yaml'},
+        mergeTips: {value: true, source: '~/.tipsrc.yaml'},
         $files: ['~/.tipsrc.yaml'],
       },
     };
     expect(config.mergeTips).toBe(true);
-    expect(config.$meta.mergeTips.origin).toBe('~/.tipsrc.yaml');
+    expect(config.$meta.mergeTips.source).toBe('~/.tipsrc.yaml');
   });
 });
