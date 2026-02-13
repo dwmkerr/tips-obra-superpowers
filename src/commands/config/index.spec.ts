@@ -7,6 +7,6 @@ describe('config command', () => {
     const command = createConfigCommand();
     expect(command).toBeInstanceOf(Command);
     expect(command.name()).toBe('config');
-    expect(command.description()).toBe('Manage tips configuration');
+    expect(command.description()).toBe('Show resolved configuration');
   });
 });
